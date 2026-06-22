@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>技术支持 · Tidings</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.75 -apple-system, system-ui, "PingFang SC", sans-serif;
+         max-width: 680px; margin: 0 auto; padding: 44px 20px; color: #1c2030; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e7e9ef; background: #0f1115; } a { color: #6ea8ff; } }
+  h1 { font-size: 28px; } h2 { font-size: 19px; margin-top: 30px; }
+  .lead { color: #555; } @media (prefers-color-scheme: dark){ .lead{color:#aab} }
+  a { color: #2563eb; }
+  .faq { margin-top: 8px; } .faq b { display:block; margin-top:16px; }
+  footer { color: #888; font-size: 13px; margin-top: 36px; }
+</style></head><body>
+<h1>Tidings · 技术支持</h1>
+<p class="lead">Tidings 是一款简洁的离线 RSS/Atom 阅读器：粘贴网址即可自动订阅，用文件夹整理来源，离线阅读、收藏与全文搜索，并支持 OPML 导入导出。下面是一些常见问题，没找到答案欢迎随时来信。</p>
+
+<h2>联系我们</h2>
+<p>遇到问题或有建议，发邮件到 <a href="mailto:kobe60843@gmail.com">kobe60843@gmail.com</a>，我们会尽快回复。</p>
+
+<h2>常见问题</h2>
+<div class="faq">
+<b>怎么订阅一个网站的 RSS？</b>
+<p>点「添加订阅」，直接粘贴网站地址即可（例如 <code>daringfireball.net</code>），不必找出确切的 Feed 链接——Tidings 会自动发现页面里声明的 RSS/Atom 源，并尝试常见的 Feed 路径。当然，如果你已经有了确切的 Feed 地址，直接粘贴它同样可以。Tidings 支持 RSS 2.0、Atom 1.0 以及 RSS 1.0 / RDF 三种格式，会自动识别。</p>
+
+<b>怎么用 OPML 把我在别处的订阅导入进来？</b>
+<p>大多数阅读器都支持把订阅列表导出成一个 <code>.opml</code> 文件。拿到这个文件后，在 Tidings 的「设置」里选择「导入 OPML」并选中它，你的订阅源（含文件夹结构）就会一次性导入。反过来，「导出 OPML」可以把当前订阅打包带走，迁移到其它阅读器。</p>
+
+<b>全文搜索能搜到哪些内容？</b>
+<p>搜索会同时覆盖文章的<strong>标题、摘要、正文和作者</strong>，并且忽略变音符号（例如搜 "cafe" 也能匹配到 "café"），方便跨语言查找。它检索的是已经同步到本地的文章，因此即使离线也能搜。</p>
+
+<b>没有网络时还能看文章吗？</b>
+<p>可以。Tidings 会把刷新到的文章正文保存在本地，已读 / 未读 / 收藏状态也存在本机，所以离线时照样能浏览和阅读，重启应用后一切照旧。只有「拉取新文章」这一步需要联网。你还可以在「设置」里调整自动刷新的间隔。</p>
+
+<b>简报里的「智能摘要」是怎么回事？需要联网或付费吗？</b>
+<p>每日简报默认使用<strong>内置的离线摘要</strong>，不联网、不花钱、开箱即用。如果你希望摘要更聪明，可以在「设置」里自行填入一个 OpenAI 兼容接口的地址和 API Key（用你自己的服务账号）；填了之后，生成简报时文章文本会发送到<strong>你指定的那个接口</strong>。这完全是可选项，留空即保持纯离线摘要。你填的地址和 Key 只保存在本机。</p>
+</div>
+
+<footer>© 2026 Tidings</footer>
+</body></html>

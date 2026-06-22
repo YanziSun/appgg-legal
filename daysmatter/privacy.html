@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隐私政策 · 日月·倒数日</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.75 -apple-system, system-ui, "PingFang SC", sans-serif;
+         max-width: 680px; margin: 0 auto; padding: 44px 20px; color: #1c2030; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e7e9ef; background: #0f1115; } a { color: #6ea8ff; } }
+  h1 { font-size: 28px; } h2 { font-size: 19px; margin-top: 30px; }
+  .updated { color: #888; font-size: 14px; }
+  .tldr { padding: 14px 16px; border: 1px solid rgba(110,168,255,.4);
+          background: rgba(110,168,255,.08); border-radius: 12px; }
+  hr { border: none; border-top: 1px solid rgba(128,128,128,.2); margin: 28px 0; }
+  a { color: #2563eb; }
+  footer { color: #888; font-size: 13px; margin-top: 36px; }
+</style></head><body>
+<h1>隐私政策</h1>
+<p class="updated">日月·倒数日 · 最后更新 2026年6月22日</p>
+<div class="tldr">无账号、无追踪、无第三方分析。你的事件、纪念日和照片背景都存在本机；若你主动开启 iCloud 同步，事件数据通过你自己的 Apple 账户在你的设备间同步，我们（开发者）无法访问。App 内「历史上的今天」会向维基百科和一个公开数据源发起只读网络请求来获取公共史料，请求中不包含任何你的个人信息。</div>
+
+<h2>我们收集什么</h2>
+<p>我们不收集、不上传、也不出售你的任何个人信息。日月没有自己的服务器、没有账号体系、没有任何分析或广告 SDK。你在 App 里创建的所有内容——事件标题、日期、分类、提醒设置、照片背景——都只保存在你的设备上。</p>
+
+<h2>本地存储</h2>
+<p>所有事件数据以 JSON 文件形式保存在 App 的本地容器（App Group 容器，供桌面小组件读取）。照片背景经降采样后存于本地。这些数据随 App 卸载而删除，除下文 iCloud 同步外不会离开你的设备。</p>
+
+<h2>iCloud 同步（走 Apple，我们无法访问）</h2>
+<p>iCloud 同步默认<strong>关闭</strong>。只有你在「设置」中手动开启后，事件数据才会通过 Apple 的 iCloud 键值存储（NSUbiquitousKeyValueStore）在你登录了同一 Apple 账户的设备间同步。该同步完全由 Apple 的 iCloud 基础设施承载并加密，数据在你自己的 Apple 账户内流转，开发者无法读取、无法访问、也无法干预。照片背景暂不参与同步。如需停止，关闭开关即可；如需删除云端副本，可在 iOS 设置中管理该 App 的 iCloud 数据。</p>
+
+<h2>历史上的今天 / 节气与农历（网络请求）</h2>
+<p>「历史上的今天」功能内置一份离线史料库，离线也可用。当你查看某天详情时，App 会额外向<strong>维基百科中文「On This Day」公开接口</strong>（zh.wikipedia.org）发起一次只读请求来补充当天的公共历史事件；史料更新源还会从一个<strong>公开的 GitHub 数据文件</strong>拉取。这些请求只包含查询的月/日（如 06/22），<strong>不包含</strong>你的事件、身份或任何个人信息；失败时静默忽略，本地数据照常显示。农历、二十四节气均为设备本地离线计算，不联网。</p>
+
+<h2>通知</h2>
+<p>提醒为<strong>本地通知</strong>（UNUserNotification），由你的设备在指定提前量于上午 9:00 触发，不经过任何服务器。是否授权通知完全由你决定，可随时在 iOS 设置中关闭。</p>
+
+<h2>照片与生物识别</h2>
+<p>选择相册照片作为背景时，仅访问你主动挑选的那张图片，处理后存于本地，不上传。应用锁使用系统的面容 ID / 触控 ID / 设备密码（LocalAuthentication）进行本地校验，App 不接触你的生物特征数据——校验完全在设备的安全隔区内完成。</p>
+
+<h2>第三方</h2>
+<p>除上文所述对维基百科和公开 GitHub 数据文件的只读访问外，日月不集成任何第三方分析、广告、崩溃统计或追踪服务。访问上述公开站点时适用各自的服务条款，但我们不向其传递你的任何身份信息。</p>
+
+<h2>你的权利</h2>
+<p>你的数据始终在你掌控之中：在 App 内可随时编辑或删除任意事件；关闭 iCloud 同步开关可停止云端同步；卸载 App 即删除全部本地数据。由于我们不收集任何个人信息，无需也无法代你导出或删除服务器数据——因为根本不存在这样的服务器。</p>
+
+<h2>儿童隐私</h2>
+<p>日月不面向 13 岁以下儿童设计，也不会有意收集儿童的个人信息。由于本 App 不收集任何个人信息，使用本身不涉及向我们传输数据。</p>
+
+<hr>
+<p>有任何隐私相关疑问，请联系 <a href="mailto:kobe60843@gmail.com">kobe60843@gmail.com</a>。</p>
+<footer>© 2026 日月·倒数日</footer>
+</body></html>

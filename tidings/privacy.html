@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隐私政策 · Tidings</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.75 -apple-system, system-ui, "PingFang SC", sans-serif;
+         max-width: 680px; margin: 0 auto; padding: 44px 20px; color: #1c2030; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e7e9ef; background: #0f1115; } a { color: #6ea8ff; } }
+  h1 { font-size: 28px; } h2 { font-size: 19px; margin-top: 30px; }
+  .updated { color: #888; font-size: 14px; }
+  .tldr { padding: 14px 16px; border: 1px solid rgba(110,168,255,.4);
+          background: rgba(110,168,255,.08); border-radius: 12px; }
+  hr { border: none; border-top: 1px solid rgba(128,128,128,.2); margin: 28px 0; }
+  a { color: #2563eb; }
+  footer { color: #888; font-size: 13px; margin-top: 36px; }
+</style></head><body>
+<h1>隐私政策</h1>
+<p class="updated">Tidings · 最后更新 2026年6月22日</p>
+<div class="tldr">无账号、无追踪、无广告、无分析 SDK。Tidings 只在刷新时向<strong>你自己订阅的 RSS/Atom 源</strong>发起网络请求，不向任何服务器上传你的个人数据。所有订阅、文章、已读与收藏状态都只保存在你的设备本地。</div>
+
+<h2>我们收集什么</h2>
+<p>Tidings <strong>不收集、不上传、也不与任何人分享你的个人数据</strong>。应用没有账号系统，无需注册或登录，不要求邮箱、手机号或任何身份信息。我们没有集成任何分析、统计、广告或崩溃上报 SDK，因此也无法追踪你读了什么、点了什么。</p>
+
+<h2>网络请求（只连你添加的 Feed 源）</h2>
+<p>作为一款 RSS/Atom 阅读器，Tidings 必然要联网——但<strong>它只连接你主动添加的订阅源</strong>：</p>
+<ul>
+  <li>当你粘贴一个网址订阅时，应用会访问该网址以自动发现其 Feed 地址。</li>
+  <li>刷新时，应用向你已订阅的各个 Feed 的服务器发起请求拉取文章（采用带 <code>ETag</code> / <code>Last-Modified</code> 的条件请求，未更新的源仅返回 304，尽量礼貌而省流）。</li>
+  <li>在阅读视图中打开文章原文或图片时，会向文章所在站点请求对应的网页与媒体资源。</li>
+</ul>
+<p>这些请求<strong>只携带拉取内容所必需的标准 HTTP 信息</strong>（如目标地址、User-Agent），<strong>不附带你的身份、设备标识或使用行为</strong>。请求直接发给那些 Feed/站点的服务器，Tidings 没有自己的后端服务器来中转或留存你的数据。请注意：你订阅的第三方源站点会按它们自己的隐私政策处理这些访问请求，这不在 Tidings 的控制范围内。</p>
+
+<h2>本地存储</h2>
+<p>你的订阅列表、文件夹、已下载的文章正文，以及已读 / 未读 / 收藏状态，全部以普通文件（JSON）<strong>仅保存在你的设备本地</strong>。因此 Tidings 可离线阅读，重启后状态依然保留。卸载应用即会删除这些本地数据。OPML 导入 / 导出文件由你自己选择位置，应用不会私自上传。</p>
+
+<h2>可选的「智能简报」摘要（默认关闭）</h2>
+<p>Tidings 内置一个<strong>完全离线</strong>的文章摘要功能，默认即可使用，不联网。</p>
+<p>如果你想要更好的摘要质量，可以在「设置」里<strong>自行填入一个 OpenAI 兼容接口的地址和 API Key</strong>。一旦填写，生成简报时应用会把相关文章的标题与正文片段发送到<strong>你指定的那个接口</strong>以换取一句话摘要。这一行为：</p>
+<ul>
+  <li><strong>完全可选、默认关闭</strong>——不填地址和 Key 就永远只用本地离线摘要；</li>
+  <li>请求只发往<strong>你自己配置的地址</strong>，Tidings 不内置、也不指向我们自己的任何服务；</li>
+  <li>你填入的接口地址与 API Key <strong>只保存在本机</strong>，不会被上传到别处；</li>
+  <li>该接口如何处理收到的文本，取决于你选择的服务商的隐私政策，请自行评估。</li>
+</ul>
+
+<h2>第三方</h2>
+<p>Tidings <strong>不包含任何第三方分析、广告或追踪组件</strong>。唯一会联系的外部服务，是上文所述的——你自己订阅的 Feed 源站点，以及（仅当你主动配置时）你自己填写的摘要接口。</p>
+
+<h2>你的权利</h2>
+<p>由于所有数据都在你的设备本地，你对它拥有完全的控制权：随时在应用内取消订阅、删除文章、清理收藏，或直接卸载应用以删除全部数据。我们手里没有你的任何数据可供导出或删除。</p>
+
+<h2>儿童隐私</h2>
+<p>Tidings 不面向 13 岁以下儿童设计，也不会有意收集儿童的任何个人信息。由于应用整体不收集个人数据，因此不存在针对任何年龄段的数据采集。</p>
+
+<hr>
+<p>有任何隐私相关疑问，请联系 <a href="mailto:kobe60843@gmail.com">kobe60843@gmail.com</a>。</p>
+<footer>© 2026 Tidings</footer>
+</body></html>

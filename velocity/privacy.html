@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隐私政策 · Velocity VPN</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.75 -apple-system, system-ui, "PingFang SC", sans-serif;
+         max-width: 680px; margin: 0 auto; padding: 44px 20px; color: #1c2030; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e7e9ef; background: #0f1115; } a { color: #6ea8ff; } }
+  h1 { font-size: 28px; } h2 { font-size: 19px; margin-top: 30px; }
+  .updated { color: #888; font-size: 14px; }
+  .tldr { padding: 14px 16px; border: 1px solid rgba(110,168,255,.4);
+          background: rgba(110,168,255,.08); border-radius: 12px; }
+  hr { border: none; border-top: 1px solid rgba(128,128,128,.2); margin: 28px 0; }
+  a { color: #2563eb; }
+  footer { color: #888; font-size: 13px; margin-top: 36px; }
+</style></head><body>
+<h1>隐私政策</h1>
+<p class="updated">Velocity VPN · 最后更新 2026年6月22日</p>
+<div class="tldr">Velocity VPN 是一款"自带配置"的网络代理客户端，基于开源 sing-box 内核。<strong>它不收集、不上传任何个人数据，没有账号体系，也不含任何第三方分析、广告或追踪 SDK。</strong>你的节点、订阅地址、规则和设置只保存在你自己的设备上。你的网络流量在你的设备与你自己配置的服务器之间直接传输——开发者无法看到、读取或记录它。</div>
+
+<h2>我们收集什么</h2>
+<p><strong>我们不收集任何个人数据。</strong>使用本应用无需注册或登录，应用也不会向开发者发送任何关于你身份、设备或上网行为的信息。</p>
+<p>应用运行所需的全部数据——你导入的代理节点、订阅地址、分流规则、策略组、DNS 设置、外观与应用偏好——都只保存在你设备本机（含 App 与 VPN 扩展共享的 App Group 容器），不会上传到我们或任何第三方服务器。我们没有服务器来接收这些数据。</p>
+
+<h2>你的网络流量（如何处理、是否记录）</h2>
+<p>Velocity VPN 通过 iOS 的 Network Extension（Packet Tunnel）把你的设备流量交给本机运行的 sing-box 内核，再按你自己配置的服务器与规则转发出去。<strong>流量直接在你的设备与你配置的服务器之间传输，全程不经过开发者的任何服务器</strong>——我们没有这样的服务器，技术上也无法访问、读取或记录你的流量内容、访问的网站或目标地址。</p>
+<p>应用内提供一个"连接日志"页面，便于你排查连接故障。该日志是一份保存在你设备本机 App Group 容器内的文件（大小上限约 256&nbsp;KB，超出后自动滚动覆盖），内容为内核与扩展的诊断信息（启动、拨号、DNS、路由的成功与错误），<strong>不是你访问记录的清单，且永远不会被上传</strong>。你可随时在应用内清空它。</p>
+<p>为了在连接后判断"是否真的能上网"，应用会向少数公开的连通性检测端点（如 Cloudflare、Google 的 <code>generate_204</code> 探测地址、Cloudflare 的 <code>cdn-cgi/trace</code>）发起请求；这些请求只用于本机显示连接状态与出口 IP/地区，不附带任何身份信息，也不发往开发者。</p>
+
+<h2>服务器配置（用户自备、本地存储）</h2>
+<p>Velocity VPN 是一个"自带配置（BYO）"的客户端：<strong>它不提供、不内置、不出售任何代理服务器</strong>。所有节点都来自你自己——通过粘贴分享链接、扫描二维码、读取剪贴板、导入 Shadowrocket/Surge <code>.conf</code> 或 Clash YAML 文件、或填写你自己的订阅地址而来。</p>
+<p>当你添加订阅后，应用会按你的设置向<strong>你自己填写的那个订阅地址</strong>发起网络请求以获取节点列表（含后台每 6 小时的自动刷新）；该请求只发往你填写的地址，不发往开发者。你连接的第三方服务器及订阅/机场提供方有其各自的隐私政策，与本应用无关，请自行评估其可信度。</p>
+
+<h2>第三方与遥测</h2>
+<p><strong>本应用不含任何第三方分析、广告、追踪或崩溃上报 SDK</strong>（如 Firebase、Sentry、Crashlytics、AppsFlyer、Adjust、Amplitude 等一概没有）。我们不做用户行为统计，不投放广告，不进行设备指纹或跨应用追踪。除上文所述的连通性探测和你自己的订阅地址外，应用不会向任何固定的"我们的"服务器发起回传。</p>
+<p>相机权限仅在你主动使用"扫码添加节点"时调用，用于在设备本地识别二维码，不会上传任何图像。</p>
+
+<h2>你的权利</h2>
+<p>由于所有数据都只在你的设备本机，你对它拥有完全的控制权：可随时在应用内编辑或删除任何节点、订阅、规则与配置，或清空连接日志。卸载应用即会一并移除本应用存储的全部本地数据。我们没有持有你的任何数据可供导出或删除——因为我们从未收集。</p>
+
+<h2>儿童隐私</h2>
+<p>本应用面向具备相关技术需求的成年用户，不面向 13 岁以下儿童，也不会有意收集其任何信息。</p>
+
+<h2>政策变更</h2>
+<p>如本政策有更新，我们会在此页面发布新版本并更新顶部的"最后更新"日期。</p>
+
+<hr>
+<p>有任何隐私相关疑问，请联系 <a href="mailto:kobe60843@gmail.com">kobe60843@gmail.com</a>。</p>
+<footer>© 2026 Velocity VPN</footer>
+</body></html>

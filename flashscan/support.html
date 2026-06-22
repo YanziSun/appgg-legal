@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>技术支持 · 闪扫</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.75 -apple-system, system-ui, "PingFang SC", sans-serif;
+         max-width: 680px; margin: 0 auto; padding: 44px 20px; color: #1c2030; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e7e9ef; background: #0f1115; } a { color: #6ea8ff; } }
+  h1 { font-size: 28px; } h2 { font-size: 19px; margin-top: 30px; }
+  .lead { color: #555; } @media (prefers-color-scheme: dark){ .lead{color:#aab} }
+  a { color: #2563eb; }
+  .faq { margin-top: 8px; } .faq b { display:block; margin-top:16px; }
+  footer { color: #888; font-size: 13px; margin-top: 36px; }
+</style></head><body>
+<h1>闪扫 · 技术支持</h1>
+<p class="lead">闪扫是一款全端侧的文档扫描 App：拍照自动矫正成 PDF，多语言 OCR 提取文字并支持全文搜索，端侧智能分类与票据账本帮你理清收据合同。你的文档从不离开手机。下面是常见问题，没解决的欢迎发邮件给我们。</p>
+
+<h2>联系我们</h2>
+<p>遇到问题或有建议，发邮件到 <a href="mailto:kobe60843@gmail.com">kobe60843@gmail.com</a>，我们会尽快回复。</p>
+
+<h2>常见问题</h2>
+<div class="faq">
+<b>怎么扫描一份文档？</b>
+点击底部中央的扫描大按钮进入相机，对准纸质文档拍摄即可——App 会自动检测文档四边、透视矫正并去掉杂乱背景，多页可连续拍摄后合成一个 PDF。在模拟器或没有相机时，也可以从相册导入图片来生成扫描件。
+
+<b>支持哪些语言的文字识别（OCR）？</b>
+OCR 在设备本地完成，支持简体中文、繁体中文、英文、日文、韩文。识别后可在文档详情的「文字」标签里全文搜索、关键词高亮、复制，或导出为可搜索 PDF / 纯文本 / RTF。
+
+<b>怎么导出 PDF？</b>
+打开任意文档，点击分享，可选择导出 PDF、逐页 JPEG、OCR 文本、可搜索 PDF（图片视觉不变但文字可被检索）或 RTF。还可对 PDF 加密码、压缩、提取指定页或拼成长图后再导出。
+
+<b>票据账本是怎么工作的？</b>
+当一份文档被识别为收据时，闪扫会在本地从 OCR 文字中抽取金额、日期和商家，自动按月汇总到账本。所有计算都在设备本地完成；抽不出的字段会显示「未识别」而不会编造，混合币种会分币种小计、不会硬加总。
+
+<b>我的数据存在哪里？会上传吗？</b>
+全部存在你自己的设备上。扫描、OCR、分类、账本统计都在本地完成，App 不发起任何网络请求，文档绝不上传。iCloud 同步是可选功能、默认关闭；只有你手动开启后，文档的元数据才会同步到你自己的私有 iCloud 账户（不含图片 / PDF 文件本身）。
+</div>
+
+<footer>© 2026 闪扫</footer>
+</body></html>

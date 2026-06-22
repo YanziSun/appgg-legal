@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隐私政策 · 闪扫</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.75 -apple-system, system-ui, "PingFang SC", sans-serif;
+         max-width: 680px; margin: 0 auto; padding: 44px 20px; color: #1c2030; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e7e9ef; background: #0f1115; } a { color: #6ea8ff; } }
+  h1 { font-size: 28px; } h2 { font-size: 19px; margin-top: 30px; }
+  .updated { color: #888; font-size: 14px; }
+  .tldr { padding: 14px 16px; border: 1px solid rgba(110,168,255,.4);
+          background: rgba(110,168,255,.08); border-radius: 12px; }
+  hr { border: none; border-top: 1px solid rgba(128,128,128,.2); margin: 28px 0; }
+  a { color: #2563eb; }
+  footer { color: #888; font-size: 13px; margin-top: 36px; }
+</style></head><body>
+<h1>隐私政策</h1>
+<p class="updated">闪扫 · 最后更新 2026年6月22日</p>
+<div class="tldr">闪扫的扫描、OCR 文字识别、智能分类、票据抽取全部在你的设备本地完成。App 不发起任何网络请求，你的文档绝不上传，没有账号、没有第三方分析 SDK、没有服务端模型。</div>
+
+<h2>我们收集什么</h2>
+<p>我们不收集、不上传、不存储你的任何个人数据。闪扫没有服务器，也没有账号体系。你扫描的文档、提取的文字、票据账本和应用内的统计数据，都只保存在你自己的设备上（以及在你主动开启时保存到你自己的 iCloud，见下文）。我们作为开发者无法看到、无法访问这些内容。</p>
+
+<h2>相机与照片访问</h2>
+<p>闪扫使用相机拍摄纸质文档，使用照片库导入已有的图片。系统会在首次使用时请求你的授权，你可以随时在「系统设置 › 隐私与安全 › 相机 / 照片」中关闭。相机拍摄的画面和导入的图片仅用于在设备本地生成扫描件，不会被发送到任何服务器。</p>
+
+<h2>OCR 与分类（端侧）</h2>
+<p>文字识别（OCR）由 Apple 的 Vision 框架在设备本地完成；文档智能分类（收据 / 合同 / 笔记 / 证件 / 白板）、票据金额与日期抽取、智能操作推荐均由 App 内置的本地规则与 NaturalLanguage 框架计算得出。整个识别、分类、抽取过程不依赖云端模型，不产生任何网络流量，识别结果只写入设备本地的文档库。</p>
+
+<h2>iCloud（可选，默认关闭）</h2>
+<p>闪扫提供可选的 iCloud 同步功能，<strong>默认关闭</strong>。只有当你在「我的 › iCloud 同步」中手动开启后，文档的元数据（如标题、分类、日期等）才会通过 CloudKit 同步到<strong>你自己的私有 iCloud 账户</strong>，以便在你的多台设备间共享。该数据存放在 Apple 提供给你的私有 iCloud 空间内，由 Apple 的隐私政策约束，我们开发者无法访问。若设备未登录 iCloud 或初始化失败，App 会自动退回纯本地存储，不会丢失数据。</p>
+
+<h2>购买</h2>
+<p>闪扫不包含任何应用内购买、订阅或广告。我们不集成 StoreKit，也不收集任何支付相关信息。</p>
+
+<h2>第三方</h2>
+<p>闪扫不集成任何第三方 SDK、分析工具、广告网络或崩溃上报服务。App 全程不发起网络请求，三个组件（主 App / 分享扩展 / 桌面小组件）的配置中均无网络放行例外（无 NSAllowsArbitraryLoads）。当你主动使用系统分享、打印或导出时，文件会交给 iOS 系统进程处理，去向完全由你选择，这部分不在闪扫的控制范围内。</p>
+
+<h2>你的权利</h2>
+<p>由于所有数据都在你的设备上，你对它们拥有完全的控制权：可随时在 App 内删除文档（含「最近删除」回收站彻底清除），或直接卸载 App 以清空全部本地数据。若你曾开启 iCloud 同步，可在「系统设置 › Apple 账户 › iCloud」中管理或删除对应数据。</p>
+
+<h2>儿童隐私</h2>
+<p>闪扫不面向 13 岁以下儿童设计，也不会有意收集儿童的个人信息。由于 App 本身不收集任何数据，使用闪扫不会向我们或任何第三方传输个人信息。</p>
+
+<hr>
+<p>有任何隐私相关疑问，请联系 <a href="mailto:kobe60843@gmail.com">kobe60843@gmail.com</a>。</p>
+<footer>© 2026 闪扫</footer>
+</body></html>
