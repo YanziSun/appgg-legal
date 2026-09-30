@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>技术支持 · 铁径健身</title>
+<title>技术支持 · 小蝶健身</title>
 <style>
   :root { color-scheme: light dark; }
   body { font: 16px/1.75 -apple-system, system-ui, "PingFang SC", sans-serif;
@@ -13,22 +13,22 @@
   .faq { margin-top: 8px; } .faq b { display:block; margin-top:16px; }
   footer { color: #888; font-size: 13px; margin-top: 36px; }
 </style></head><body>
-<h1>铁径健身 · 技术支持</h1>
-<p class="lead">铁径健身是一款离线优先的健身训练教练 App：内置动作库、训练计划与模板，训练时记录组次重量并配休息计时，追踪进度与个人最佳，支持身体数据与 HealthKit。</p>
+<h1>小蝶健身 · 技术支持</h1>
+<p class="lead">免费的离线优先训练记录 App，无账号、广告或内购。支持动作参考、部分动作三维演示、训练模板、组次重量与休息记录、进度统计及可选 Apple 健康体重读写。</p>
 
 <h2>联系我们</h2>
-<p>遇到问题或有建议，发邮件到 <a href="mailto:kobe60843@gmail.com">kobe60843@gmail.com</a>，我们会尽快回复。</p>
+<p>遇到问题或有建议，发邮件到 <a href="mailto:kobe60843@gmail.com">kobe60843@gmail.com</a>。请说明 App 版本、iOS 版本、设备型号和复现步骤；截图请先遮盖个人信息。无需提供健康数据或完整训练备份。</p>
 
 <h2>常见问题</h2>
 <div class="faq">
 <b>问：我的训练数据存在哪里？需要联网或注册账号吗？</b>
-<p>答：不需要。铁径健身全程离线运行，没有账号，也不发起任何网络请求。你的动作库、训练计划、训练记录和进度都只保存在你手机本地，重启后依然保留。</p>
+<p>答：核心功能无需账号或联网，记录保存在本机。主动打开外部参考网站或使用第三方文件服务可能需要网络。请定期自行导出备份，开发者无法从服务器恢复你的训练数据。</p>
 
 <b>问：怎么和 Apple 健康（HealthKit）同步？</b>
-<p>答：在“身体数据”页授权后，App 会读取你健康 App 里最新的体重，并把你在铁径健身里记录的体重写回健康 App。仅同步“体重”一项。你可以随时在系统“设置 › 健康 › 数据访问与设备 › 铁径健身”里开启或关闭授权。</p>
+<p>答：在“身体”页主动选择导入最新体重或将最新体重写入健康，再按系统提示授权；不是自动全量同步。若没有读到数据，可能没有体重记录或未允许读取。请解锁设备，在健康 App 中检查小蝶健身的访问权限。拒绝授权仍可手动记录。</p>
 
 <b>问：换手机或卸载前怎么保留数据？</b>
-<p>答：由于数据只在本地，卸载 App 会一并删除。请先用 App 内的导出功能备份数据，再在新设备上导入即可迁移。</p>
+<p>答：先在设置的数据管理中生成备份，再通过分享或文件服务实际保存 JSON 文件。生成成功不代表已经存到外部。导入前核对预览，同标识记录会按导入确认的规则覆盖；训练草稿和部分偏好不在备份范围内。卸载不会自动删除外部备份或健康样本。</p>
 
 <b>问：训练时怎么记录组次和重量？休息计时在哪？</b>
 <p>答：开始训练后，每个动作可逐组录入重量与次数，App 内置休息计时器会在完成一组后自动开始，并支持超级组。结束后进度与个人最佳（PR）会自动更新到统计图表。</p>
@@ -37,5 +37,13 @@
 <p>答：可以。在动作库里支持关键词搜索、按训练部位筛选，点进去可查看动作详情，方便你组织每次训练内容。</p>
 </div>
 
-<footer>© 2026 铁径健身</footer>
+<h2>为什么有些动作没有动画？</h2>
+<p>当前仅部分动作开放三维演示，其余提供动作资料；不会用相似动画冒充。后续版本逐步补齐。演示和肌群高亮仅作一般参考，不代表实时姿态检测或个性化安全评估。</p>
+<h2>记录没有保存或提醒未出现？</h2>
+<p>请检查保存错误提示和设备可用空间，保留输入后重试，不要为了排查先卸载 App。休息提醒还受通知权限、专注模式和系统状态影响；未授权通知不影响手动记录。</p>
+<h2 lang="en">Support in English</h2>
+<p lang="en">Email kobe60843@gmail.com with your app version, iOS version, device model and steps to reproduce the issue. Please redact personal information from screenshots and do not send full health records or backups. Core features work offline. Apple Health body-weight import/export is optional and user-initiated. Save an exported JSON backup outside the app before uninstalling. Only some exercises currently include 3D demonstrations; this app is a general fitness reference, not personalized medical or coaching advice.</p>
+
+<p><a href="privacy.html">隐私政策 / Privacy policy</a></p>
+<footer>© 2026 小蝶健身 · 更新 2026年9月30日</footer>
 </body></html>
