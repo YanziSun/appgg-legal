@@ -16,13 +16,20 @@
   footer { color: #888; font-size: 13px; margin-top: 36px; }
 </style></head><body>
 <h1>隐私政策</h1>
-<p class="updated">小蝶健身 · 更新日期 2026年9月30日 · com.appgg.ironpath</p>
+<p class="updated">小蝶健身 · 更新日期 2026年10月9日 · com.appgg.ironpath</p>
 <div class="tldr">小蝶健身无需账号，核心训练和角色演示可离线使用。训练记录由设备本地保存；开发者不通过 App 接收你的训练或健康记录。主动导出文件、发送支持邮件、打开外部网站以及 Apple 系统服务的处理范围见下文。</div>
 
 <h2>我们收集什么</h2>
-<p>App 在本机处理动作与模板、训练组次及重量、训练草稿、休息计时、有氧记录、身体数据和使用偏好，以提供训练记录、统计和角色展示。当前版本没有账号、广告、内购，也未集成第三方广告、分析或远程崩溃上报 SDK。你主动发送支持邮件时，我们会收到你的邮箱及邮件内容，仅用于处理请求；请不要发送不必要的健康记录或完整备份。</p>
+<p>App 在本机处理动作与模板、训练组次及重量、训练草稿、休息计时、有氧记录、身体数据和使用偏好，以提供训练记录、统计和角色展示。当前版本没有账号、广告和内购，不集成第三方广告 SDK；1.0.1 起可自主选择的使用与诊断统计详见下文。你主动发送支持邮件时，我们会收到你的邮箱及邮件内容，仅用于处理请求；请不要发送不必要的健康记录或完整备份。</p>
 
-<h2>数据如何存储</h2>
+<h2>1.0.1 起的可选使用统计与诊断</h2>
+<p>旧版 1.0 不包含以下联网统计。支持此功能的版本在“设置 → 使用统计与诊断”提供独立的“发送使用统计与故障事件”开关，默认关闭，只有你阅读提示并主动同意才发送。本机日志开关不等于上传授权；拒绝或关闭不影响训练功能。</p>
+<p>上报仅包括固定的页面访问、训练开始/恢复/保存/放弃等事件，固定故障代码、收到系统闪退或卡顿报告的标记、发生时间、App 版本、平台和随机安装标识。该标识由 App 随机生成，用于同一应用内事件去重和使用分析；不使用 IDFA，不跨应用追踪。它可以关联本次授权期间的事件，因此不是完全不可关联的匿名数据。我们不上传具体动作、训练重量和次数、健康或身体数据、搜索词、备注、原始错误文本、崩溃堆栈或设备指纹。</p>
+<p>上述事件由腾讯云 CloudBase 上海区接收并在受访问控制的数据库中存储，开发者通过 Liftoff 查看使用与故障汇总，以改进产品可靠性和体验，不向广告商出售或共享。网络基础设施会处理传输所必需的连接信息；App 的业务事件表不保存原始 IP。原始事件最长保留 90 天，之后自动删除。参考 <a href="https://cloud.tencent.com/document/product/301/11470">腾讯云隐私声明</a>。</p>
+<p>待发事件在本机最多保留 100 条和 24 小时，网络失败会重试。关闭上报后停止新上报，并清除本机待发队列与随机标识；已发送或在途到达服务端的事件不能自动撤回，将按上述期限删除。重新开启会生成新标识。若请求访问或删除服务端事件，可联系下方邮箱；由于不收集姓名等身份信息，可能无法仅凭姓名或邮箱定位到安装事件，且不能保证在标识已被清除后能够定位。</p>
+<p>本机使用统计与故障日志另有独立开关，默认关闭，最多保留 30 天与 200 条故障条目，可预览、清除或主动分享。它们不会因为打开本机开关而自动上传；主动分享报告时，所选收件方可以看到使用日期和故障时间。缓存可能被系统清理。</p>
+
+<h2>本地训练数据</h2>
 <p>记录保存在 App 的本地存储中；角色解压文件为可重新生成的缓存。App 不提供开发者服务器同步或 CloudKit 同步。设备备份、迁移及健康数据的系统同步受你的 Apple 设置及 Apple 政策约束，不等于开发者收到这些数据。可用空间不足或保存失败时，请保留输入并重试。</p>
 <p>你主动生成和分享 JSON 备份时，文件可能含训练、身体和有氧记录。生成文件不等于已保存到外部位置；只有你选择的文件服务、分享对象或设备会获得该副本，并按其规则处理。请妥善保管，不要公开分享。备份不包含训练草稿、全部偏好或健康 App 的其他数据。</p>
 
@@ -39,6 +46,7 @@
 <h2>政策更新</h2>
 <p>功能或数据处理方式改变时，我们会更新此页日期及说明；新增权限仍由系统向你请求。</p>
 <h2 lang="en">English summary</h2>
+<p lang="en">Starting with version 1.0.1, optional usage and diagnostic reporting is off by default and requires separate opt-in. Fixed events, timestamps, app version, platform and a random app-specific installation identifier are sent to Tencent CloudBase in Shanghai for product analytics and reliability analysis. The identifier can link events within a consent period; the data is not fully anonymous. No health measurements, workout details, exercise identifiers, search terms, notes, raw error messages or crash stacks are sent. Pending events expire after 24 hours (maximum 100); server events are deleted after 90 days. Opting out clears the local queue and identifier but cannot retract events already received or in flight. Local-only logs have separate controls and are shared only at your request. These reporting features do not exist in version 1.0.</p>
 <p lang="en">Xiaodie Fitness works offline for core training and character demonstrations. No account, advertising or in-app purchase is required. Training, body measurements and preferences are stored locally, not sent to the developer. Optional Apple Health access is limited to body weight and requires your action and authorization. Imported measurements retain their original date and identifier to prevent duplicates. You control exported backups and their recipients. Deleting the app does not remove exported files, system backups or Apple Health samples. External websites, GitHub Pages hosting and Apple services follow their own privacy policies. Support emails disclose your email address and message to us solely to handle your request; avoid sending unnecessary health data. Contact the email below for support and privacy questions.</p>
 
 <hr>
